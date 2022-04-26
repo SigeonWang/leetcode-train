@@ -55,9 +55,21 @@ public class Test {
 //
 //        }
 
-        int[] arr = {1, 2, 5, 3, -1};
-        System.out.println(Arrays.toString(Arrays.copyOfRange(arr, 0, 2)));
+//        int[] arr = {1, 2, 5, 3, -1};
+//        System.out.println(Arrays.toString(Arrays.copyOfRange(arr, 0, 2)));
+//
+//        System.out.println("abcd123".substring(1, 3));
 
+        List<List<Integer>> res = new ArrayList<>();
+        List<Integer> combine = new ArrayList<>();
+        combine.add(1);
+        combine.add(3);
+        res.add(combine);
+//        res.add(new ArrayList<>(combine));
+        System.out.println(res);
+        combine.remove(combine.size() - 1);
+        res.add(combine);
+        System.out.println(res);
 
     }
 

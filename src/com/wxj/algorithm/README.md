@@ -23,6 +23,7 @@ function fn (list) {
     var right = list.length - 1;
     
     //遍历数组
+    // 如果左右指针可以相等这里就<=，如果不能相等就<
     while (left <= right) {
         left++;
         // 一些条件判断 和处理

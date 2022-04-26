@@ -22,7 +22,7 @@ public class DivideAndConquer {
      * @param left 最小下标
      * @param right 最大下标
      */
-    public static void mergeSort(int[] arr, int left, int right) {
+    public void mergeSort(int[] arr, int left, int right) {
         // 注意这个边界条件。
         // 最小的子问题情况是left = right - 1，这时候开始自下而上将子问题的解逐层递增融入主问题的求解中
         if (left < right) {
@@ -35,7 +35,7 @@ public class DivideAndConquer {
         }
     }
     // 合并已经排好序的两个数组段
-    public static void merge(int[] arr, int left, int mid, int right) {
+    public void merge(int[] arr, int left, int mid, int right) {
         int[] tmp = new int[right - left + 1];
         int i = left, j = mid + 1, k = 0;
         // 把较小的数先移到新数组中
@@ -62,8 +62,9 @@ public class DivideAndConquer {
     }
 
     public static void main(String[] args) {
+        DivideAndConquer c = new DivideAndConquer();
         int[] arr = {1, 3, -1, 0, 9};
-        mergeSort(arr, 0, arr.length - 1);
+        c.mergeSort(arr, 0, arr.length - 1);
         System.out.println(Arrays.toString(arr));
     }
 }
